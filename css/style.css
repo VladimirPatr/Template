@@ -1,0 +1,572 @@
+@import url(normalize.css);
+
+html {
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+body {
+    min-width: 320px;
+    min-height: 100vh;
+  
+    font-family: 'Roboto', sans-serif;;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+img {
+    max-width: 100%;
+    height: auto;
+}  
+button {
+    padding: 0;
+    cursor: pointer;
+  }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, p, figure, fieldset {
+    margin: 0;
+} 
+iframe {
+    border: none;
+}
+  
+
+button {
+    cursor: pointer;
+}
+h1 {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 61px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+
+    color: #383A4C;
+}
+.container {
+    max-width: 1260px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+
+    padding-top: 40px;
+    background-color: transparent;
+}
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    text-align: center;
+}
+.header__tel {
+    font-size: 23px;
+    line-height: 28px;
+}
+.header__callback {
+    font-size: 16px;
+    line-height: 19px;
+    webkit-text-decoration: rgba(255, 255, 255, 0.5) solid underline;
+    text-decoration: rgba(255, 255, 255, 0.5) solid underline;
+    -webkit-text-underline-position: under;
+    text-underline-position: under;
+}
+.header__tel-logo {
+    display: none;
+}
+.logo {
+    display:inline-block;
+    width: 60px;
+    height: 60px;
+}
+.logo img {
+    display:inline-block;
+    width: 100%;
+    object-fit: cover;
+}
+.main {
+    position: relative;
+    text-align: center;
+}
+.main-header {
+    min-height: 732px;
+    padding-top: 228px;
+    padding-bottom: 120px;
+    background-image: url(../img/bg-header.jpg);
+    background-size: cover;
+}
+.main-header p {
+    max-width: 960px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 90px;
+}
+.btn-detail {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px 48px;
+    background: #15A9CB;
+    box-shadow: 0px 4px 25px rgba(21, 169, 203, 0.3);
+    border-radius: 50px;
+    }
+
+.advantages {
+    padding: 70px 0;
+    text-align: center;
+    background: #F9F9F9;
+}
+.advantages h2 {
+    margin-bottom: 25px;
+
+}
+.advantages__text-line {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 22px;
+    color: #383A4C;
+    
+    margin-bottom: 35px;
+    position: relative;
+    
+}   
+.advantages__text-line:after,  .advantages__text-line:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 42px;
+    height: 2px;
+    background: #383A4C;
+} 
+.advantages__text-line:after {
+    
+    left: -64px;
+} 
+.advantages__text-line:before {
+
+        right: -64px;
+}
+
+.advantages__text {
+    font-size: 18px;
+    color: #383A4C;
+    max-width: 725px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    counter-reset: count 0;
+    flex-wrap: wrap;
+}
+.advantages__item  {
+    flex-basis: 196px;
+    
+}
+
+.advantages__item p {
+    position: relative;
+    padding-top: 138px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #383A4C;
+    
+}
+.advantages__item p:before {
+    content: counter(count);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 122px;
+    height: 122px;
+    background: #23C7EC;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 57px;
+    color: #FFF;
+    border-radius: 50%;
+    counter-increment: count;
+    
+}
+
+.registration {
+    min-height: 621px;
+    padding: 70px 0;
+    background-image: url(../img/bg-form.jpg);
+    background-size: cover;
+}
+.registration h2 {
+    color: #fff;
+    margin-bottom: 17px;
+}
+
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 21px;
+    max-width: 423px;
+    margin-bottom: 50px;
+}
+.registration__text {
+    margin-bottom: 50px;
+}
+
+.registration__input {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 50px;
+    outline: none;
+    padding: 9px 25px;
+    color: #fff;
+}
+.registration__input:placeholder {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.5)
+
+}
+.input__last {
+    margin-bottom: 50px;
+}
+.call-me {
+    text-align: center;
+    padding: 11px 38px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    width: 218px;
+
+    background: #15A9CB;
+    box-shadow: 0px 4px 25px rgba(21, 169, 203, 0.3);
+    border-radius: 50px;
+    border: none; 
+    margin: 0 auto;
+
+}
+.registration__approval a{
+    color: #4A76A8;
+    text-decoration: #4A76A8 solid underline;
+}
+.footer {
+    padding: 45px 0;
+    background: #2F324B;
+}
+.container_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-wrapper {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+}
+.logo-wrapper p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    
+}
+.footer__text {
+    font-weight: 500;
+    font-size: 12px;
+}
+.footer__bottom {
+    display: none;
+    
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 1024px;   
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 47px;
+        margin-bottom: 28px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    
+    .header {
+        padding-top: 26px;
+    }
+    .header__tel {
+        font-size: 21px;
+    }
+    .header__callback {
+        font-size: 13px;
+    }
+    
+    .main-header {
+        min-height: 528px;
+        padding-top: 156px;
+        padding-bottom: 70px;
+    }
+    .main-header p {
+        max-width: 754px;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 60px;
+    }
+    .btn-detail {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 12px 48px;
+        background: #15A9CB;
+        box-shadow: 0px 4px 25px rgba(21, 169, 203, 0.3);
+        border-radius: 50px;
+    }
+    
+    .advantages h2 {
+        margin-bottom: 23px;
+    
+    }
+    .advantages__text-line {
+        font-size: 20px;
+        margin-bottom: 33px;
+    }   
+    .advantages__text-line:after,  .advantages__text-line:before {
+        width: 40px;
+    } 
+    .advantages__text-line:after {
+        
+        left: -62px;
+    } 
+    .advantages__text-line:before {
+    
+            right: -62px;
+    } 
+    .advantages__text {
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 50px;
+    }
+
+    
+    .advantages__item  {
+        flex-basis: 180px;
+        
+    }
+
+    .advantages__item p {
+        padding-top: 130px;
+        font-size: 18px;
+        line-height: 25px;
+        
+    }
+    .advantages__item p:before {  
+        width: 104px;
+        height: 104px;  
+        font-size: 52px;   
+    }
+
+    .registration {
+        min-height: 558px;
+        padding-bottom: 56px;
+    }
+    .registration h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .registration__form {
+        gap: 20px;
+        max-width: 377px;
+        margin-bottom: 30px;
+    }
+    .registration__text {
+        margin-bottom: 50px;
+    }
+
+    .registration__input {
+        padding: 8px 23px;
+    }
+    .registration__input:placeholder {
+        font-size: 20px;
+    }
+    .registration__approval {
+        font-size: 17px;
+    }
+    
+    .footer {
+        padding: 49px 0;
+    }
+            
+    }
+    @media screen and (max-width: 320px) {
+        .container {
+            max-width: 320px;
+            padding: 0 15px;
+            
+        }
+        h1 {
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 23px;
+        }
+        h2 {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        .header {
+            padding-top: 19px;
+        }
+        .header .header__wrapper {
+            display: none;
+        }
+        .header__tel-logo {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+        .main-header {
+            min-height: 100vh;
+            padding-top: 110px;
+            padding-bottom: 65px;
+        }
+    
+        .main-header p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .advantages {
+            padding: 30px 0 60px 0;
+        
+        }
+    
+        .advantages h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 23px;
+        }
+        .advantages__text-line {
+            font-size: 16px;
+            margin-bottom:26px;
+        }   
+        .advantages__text-line:after,  .advantages__text-line:before {
+            width: 20px;
+        } 
+        .advantages__text-line:after {
+            
+            left: -42px;
+        } 
+        .advantages__text-line:before {
+        
+                right: -42px;
+        } 
+        .advantages__text {
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 40px;
+        }
+
+        .advantages__item  {
+            flex-basis: 166px;
+            
+        }
+        .advantages__list {
+            flex-direction: column;
+            gap: 40px;
+        }
+    
+        .registration {
+            min-height: 398px;
+            padding: 30px 0;
+        }
+        .registration h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    
+        .registration__form {
+            gap: 15px;
+            max-width: 290px;
+        }
+        .registration__text {
+            margin-bottom: 35px;
+        }
+    
+        .registration__input {
+            padding: 6px 18px;
+        }
+        .registration__input:placeholder {
+            font-size: 14px;
+        }
+        .registration__approval {
+            font-size: 17px;
+        }
+        
+        .footer {
+            padding: 25px 0;
+        }
+        .footer__text {
+            display: none;
+        }
+        .footer .header__wrapper {
+            display: none;
+        }
+        .logo-wrapper p{
+            font-size: 8px;
+            line-height: 11px;
+        }
+        .footer__bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 15px 0;
+            background: #2A2C3F;
+            min-height: 47px;
+        }
+        
+    }
